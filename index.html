@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#f5f6f8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e1317" media="(prefers-color-scheme: dark)">
+<title>NefroCalc</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <g id="kidneys">
+    <path d="M22 7c-8.5 0-14 8.6-14 20s5.5 22 14 22c5.2 0 8.5-3.2 8.5-7.4 0-3.3-2.4-5.2-2.4-9.4 0-4.1 3.1-5.4 3.1-9.6C31.2 14 27.4 7 22 7z" style="fill:var(--brand)"/>
+    <path d="M42 7c8.5 0 14 8.6 14 20s-5.5 22-14 22c-5.2 0-8.5-3.2-8.5-7.4 0-3.3 2.4-5.2 2.4-9.4 0-4.1-3.1-5.4-3.1-9.6C32.8 14 36.6 7 42 7z" style="fill:var(--brand)"/>
+    <path d="M28.6 33.5c1.6 5 2.4 12 2.4 23M35.4 33.5c-1.6 5-2.4 12-2.4 23" style="fill:none;stroke:var(--brand)" stroke-width="2.6" stroke-linecap="round"/>
+  </g>
+</defs></svg>
+
+<header class="top"><div class="in">
+  <button class="ib" id="back" aria-label="Indietro" hidden><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button>
+  <a class="brand" href="#" aria-label="NefroCalc, home"><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#kidneys"/></svg>NefroCalc</a>
+  <a class="ib" href="#formule" aria-label="Formule di riferimento"><svg viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M4 20.5A2.5 2.5 0 0 0 6.5 23H20v-5"/><path d="M9 8h7M9 12h5"/></svg></a>
+  <a class="ib" href="#info" aria-label="Info e trasparenza"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M12 11v6M12 7.5v.5"/></svg></a>
+  <button class="reset" id="reset" aria-label="Reset della sessione">Reset<span id="reset-n" hidden></span></button>
+</div></header>
+
+<main id="main" aria-live="off"></main>
+<div class="toast" id="toast" role="status"></div>
+<div class="veil-cover" aria-hidden="true"><svg viewBox="0 0 64 64"><use href="#kidneys"/></svg></div>
+<noscript><p style="padding:20px">NefroCalc richiede JavaScript attivo.</p></noscript>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
